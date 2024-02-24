@@ -25,6 +25,7 @@ function App() {
   ]);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [playTime, setPlayTime] = useState(0);
+  const [autoPlay , setAutoPlay] = useState(false)
 
   const handleFile = (e) => {
     //storing data bcz of state update side effect due to upload ----
@@ -57,12 +58,14 @@ function App() {
 
   const clickHandle = (index) => {
     setCurrentTrackIndex(index);
+    setAutoPlay(true);
   };
 
   const callNext = () => {
     setCurrentTrackIndex(
       (prevTrackIndex) => (prevTrackIndex + 1) % playlist.length
     );
+    setAutoPlay(true);
   };
 
   useEffect(() => {
@@ -85,6 +88,7 @@ function App() {
         currentTrackIndex={currentTrackIndex}
         trackName={trackName}
         callNext={callNext}
+        autoPlay={autoPlay}
       />
       <Uploader handlefile={handleFile} />
       <Playlist trackName={trackName} clickHandle={clickHandle} currentTrackIndex={currentTrackIndex} />

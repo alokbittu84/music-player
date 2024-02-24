@@ -7,6 +7,7 @@ function Player({
   trackName,
   callNext,
   playTime,
+  autoPlay
 }) {
   window.addEventListener("beforeunload", function () {
     localStorage.setItem("trackIndex", JSON.stringify(currentTrackIndex));
@@ -29,7 +30,7 @@ function Player({
         id="audio"
         className={styles.audioPlayer}
         controls
-        autoPlay
+        autoPlay={autoPlay}
         onEnded={callNext}
         src={playlist[currentTrackIndex]}
       >

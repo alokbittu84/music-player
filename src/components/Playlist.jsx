@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./Playlist.module.css";
 function Playlist({ trackName, currentTrackIndex, clickHandle }) {
-  {
-    console.log(currentTrackIndex, "ghy");
-  }
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Playlist</h1>
@@ -17,7 +15,7 @@ function Playlist({ trackName, currentTrackIndex, clickHandle }) {
             className={styles.playlistItem}
             onClick={() => clickHandle(index)}
           >
-            <strong>{index + 1}.</strong>&nbsp;&nbsp; &nbsp; {track}
+            <strong>{index + 1}{index>4 && <span>u</span>}.</strong>&nbsp;&nbsp; &nbsp;{track} 
           </li>
         ))}
       </ul>
@@ -26,3 +24,5 @@ function Playlist({ trackName, currentTrackIndex, clickHandle }) {
 }
 
 export default Playlist;
+
+
