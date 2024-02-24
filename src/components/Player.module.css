@@ -1,0 +1,29 @@
+.container {
+    text-align: center;
+    border : 2px solid rgb(25, 223, 117) ;
+    padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  width: 40%; 
+  height: 20%;
+  background-color: #f0f0f0;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+  }
+  
+  .trackName {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .audioPlayer {
+    width: 70%;
+    margin-bottom: 20px;
+  }
